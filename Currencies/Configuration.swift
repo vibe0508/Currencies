@@ -19,6 +19,7 @@ struct Configuration {
             return Configuration.isTestEnvironment ? 3 : 600
         }
         static let refreshRate: TimeInterval = 1
+        static let startupBase = CalculationBase(currencyCode: "EUR", amount: 1)
     }
 
     struct Networking {

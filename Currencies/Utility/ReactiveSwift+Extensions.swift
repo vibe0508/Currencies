@@ -8,8 +8,8 @@
 
 import ReactiveSwift
 
-extension ScopedDisposable {
-    convenience init?(_ disposable: Disposable?) {
+extension ScopedDisposable where Inner == AnyDisposable {
+    convenience init?(opt disposable: Disposable?) {
         guard let disposable = disposable else {
             return nil
         }

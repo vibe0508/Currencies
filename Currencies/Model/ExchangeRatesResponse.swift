@@ -10,7 +10,7 @@ import Foundation
 
 struct ExchangeRatesResponse {
     let baseCurrency: String
-    let rates: [ExchangeRate]
+    let rates: [String: Double]
 }
 
 extension ExchangeRatesResponse: Decodable {
@@ -22,8 +22,6 @@ extension ExchangeRatesResponse: Decodable {
     init(from decoder: Decoder) throws {
         let container = try decoder.container(keyedBy: DecodingKey.self)
         baseCurrency = try container.decode(String.self, forKey: .baseCurrency)
-        rates = try container.decode([String: Double].self, forKey: .rates).map {
-            ExchangeRate(currencyCode: $0.key, rate: $0.value)
-        }
+        rates = try container.decode([String: Double].self, forKey: .rates)
     }
 }

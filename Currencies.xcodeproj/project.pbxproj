@@ -17,7 +17,6 @@
 		11F8864A20E8174A0098DC13 /* UITableView+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8864920E8174A0098DC13 /* UITableView+Extensions.swift */; };
 		11F8864C20E819140098DC13 /* CurrencyCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8864B20E819140098DC13 /* CurrencyCell.swift */; };
 		11F8864E20E827FA0098DC13 /* ReactiveSwift+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8864D20E827FA0098DC13 /* ReactiveSwift+Extensions.swift */; };
-		11F8865020E828ED0098DC13 /* ExchangeRate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8864F20E828ED0098DC13 /* ExchangeRate.swift */; };
 		11F8865220E829700098DC13 /* ExchangeRatesResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8865120E829700098DC13 /* ExchangeRatesResponse.swift */; };
 		11F8865420E82B5B0098DC13 /* Dictionary+Decodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8865320E82B5B0098DC13 /* Dictionary+Decodable.swift */; };
 		11F8865620E82C8F0098DC13 /* CalculationBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8865520E82C8E0098DC13 /* CalculationBase.swift */; };
@@ -30,6 +29,7 @@
 		11F8867320E8B4CA0098DC13 /* ReachabilityMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8867220E8B4CA0098DC13 /* ReachabilityMock.swift */; };
 		11F8867520E8B5380098DC13 /* RatesRequestorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8867420E8B5380098DC13 /* RatesRequestorTests.swift */; };
 		11F8867820E8F4200098DC13 /* DataMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8867720E8F4200098DC13 /* DataMocks.swift */; };
+		11F8867B20E8F8AF0098DC13 /* AmountCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8867A20E8F8AF0098DC13 /* AmountCalculator.swift */; };
 		C0FF3184CA910F5B2DB22283 /* Pods_Currencies_CurrenciesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8647A707D6AC11C7D79AFCB /* Pods_Currencies_CurrenciesTests.framework */; };
 		FF3A419C4884AEE62A7BB7B5 /* Pods_Currencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5A1B806EB3FC9F20058761 /* Pods_Currencies.framework */; };
 /* End PBXBuildFile section */
@@ -57,7 +57,6 @@
 		11F8864920E8174A0098DC13 /* UITableView+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UITableView+Extensions.swift"; sourceTree = "<group>"; };
 		11F8864B20E819140098DC13 /* CurrencyCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCell.swift; sourceTree = "<group>"; };
 		11F8864D20E827FA0098DC13 /* ReactiveSwift+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ReactiveSwift+Extensions.swift"; sourceTree = "<group>"; };
-		11F8864F20E828ED0098DC13 /* ExchangeRate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRate.swift; sourceTree = "<group>"; };
 		11F8865120E829700098DC13 /* ExchangeRatesResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExchangeRatesResponse.swift; sourceTree = "<group>"; };
 		11F8865320E82B5B0098DC13 /* Dictionary+Decodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Decodable.swift"; sourceTree = "<group>"; };
 		11F8865520E82C8E0098DC13 /* CalculationBase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculationBase.swift; sourceTree = "<group>"; };
@@ -72,6 +71,7 @@
 		11F8867220E8B4CA0098DC13 /* ReachabilityMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReachabilityMock.swift; sourceTree = "<group>"; };
 		11F8867420E8B5380098DC13 /* RatesRequestorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesRequestorTests.swift; sourceTree = "<group>"; };
 		11F8867720E8F4200098DC13 /* DataMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMocks.swift; sourceTree = "<group>"; };
+		11F8867A20E8F8AF0098DC13 /* AmountCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountCalculator.swift; sourceTree = "<group>"; };
 		5FCEE8EF7D5C104DFCF417A5 /* Pods-Currencies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies/Pods-Currencies.release.xcconfig"; sourceTree = "<group>"; };
 		75D14BE7E9179F9864EBCE91 /* Pods-Currencies-CurrenciesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies-CurrenciesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies-CurrenciesTests/Pods-Currencies-CurrenciesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8647A707D6AC11C7D79AFCB /* Pods_Currencies_CurrenciesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currencies_CurrenciesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -170,7 +170,6 @@
 		11F8865720E82CC10098DC13 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				11F8864F20E828ED0098DC13 /* ExchangeRate.swift */,
 				11F8865520E82C8E0098DC13 /* CalculationBase.swift */,
 				11F8865120E829700098DC13 /* ExchangeRatesResponse.swift */,
 			);
@@ -203,6 +202,7 @@
 				11F8865820E82D080098DC13 /* NetworkWrapper.swift */,
 				11F8865A20E833180098DC13 /* RatesRequestor.swift */,
 				11F8866020E8AFEC0098DC13 /* ReachabilityWrapper.swift */,
+				11F8867A20E8F8AF0098DC13 /* AmountCalculator.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -433,11 +433,11 @@
 				11F8865F20E8A9700098DC13 /* Configuration.swift in Sources */,
 				11F8863320E80AD40098DC13 /* CurrenciesListViewController.swift in Sources */,
 				11F8865620E82C8F0098DC13 /* CalculationBase.swift in Sources */,
-				11F8865020E828ED0098DC13 /* ExchangeRate.swift in Sources */,
 				11F8864520E8129F0098DC13 /* CurrencyCellViewModel.swift in Sources */,
 				11F8865220E829700098DC13 /* ExchangeRatesResponse.swift in Sources */,
 				11F8863120E80AD40098DC13 /* AppDelegate.swift in Sources */,
 				11F8865920E82D080098DC13 /* NetworkWrapper.swift in Sources */,
+				11F8867B20E8F8AF0098DC13 /* AmountCalculator.swift in Sources */,
 				11F8864320E812860098DC13 /* CurrenciesListViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

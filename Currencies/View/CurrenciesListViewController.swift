@@ -13,17 +13,17 @@ class CurrenciesListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let viewModel: CurrenciesListViewModel! = nil
+    let viewModel: CurrenciesListViewModel = CurrenciesListViewModelImpl()
 
     private var reloadSubscription: ScopedDisposable<AnyDisposable>?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        subscribeToViewModel()
     }
 
     func subscribeToViewModel() {
-        reloadSubscription = ScopedDisposable(
+        reloadSubscription = ScopedDisposable(opt:
             viewModel.reloads.observeValues { [weak self] in
                 self?.tableView.reloadData()
             }
@@ -34,7 +34,7 @@ class CurrenciesListViewController: UIViewController {
 
 extension CurrenciesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 0//viewModel.cells.count
+        return viewModel.cells.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

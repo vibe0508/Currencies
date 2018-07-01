@@ -29,7 +29,7 @@ class CurrencyCell: UITableViewCell {
         viewModelSubscription.dispose()
         viewModelSubscription = CompositeDisposable()
 
-        currencyTitleLabel.text = viewModel?.currencyCode
+        currencyCodeLabel.text = viewModel?.currencyCode
 
         guard let viewModel = viewModel else {
             return
@@ -38,6 +38,9 @@ class CurrencyCell: UITableViewCell {
         viewModelSubscription += symbolicIconView.reactive.text <~ viewModel.symbolicIcon
         viewModelSubscription += currencyTitleLabel.reactive.text <~ viewModel.currencyTitle
         viewModelSubscription += amountField.reactive.text <~ viewModel.amountText
-        viewModelSubscription += amountField.reactive.continuousTextValues.observe(viewModel.userInputAmount)
+        viewModelSubscription += amountField.reactive.continuousTextValues.observe(viewModel.userInputObserver)
+        viewModelSubscription += amountField.reactive.controlEvents(.editingDidBegin).map {
+            $0.text
+        }.observe(viewModel.userInputObserver)
     }
 }

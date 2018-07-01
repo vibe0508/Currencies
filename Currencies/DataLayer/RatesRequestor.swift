@@ -8,9 +8,17 @@
 
 import Foundation
 import Result
+import Reachability
 import ReactiveSwift
 
-class RatesRequestor {
+protocol RatesRequestorWrapper {
+    var state: SignalProducer<RatesRequestor.State, NoError> { get }
+    func set(_ baseCurrency: String)
+    func start()
+    func stop()
+}
+
+class RatesRequestor: RatesRequestorWrapper {
 
     enum State {
         case noValue
@@ -20,15 +28,20 @@ class RatesRequestor {
 
     private let queue = DispatchQueue(label: "FetchingRates", qos: .background)
     private let network: NetworkWrapper
-    private let reachability: ReachabilityWrapper
+    private let reachability: ReachabilityWrapper?
 
     private let _state = MutableProperty<State>(.noValue)
 
-    private var baseCurrency = "EUR"
+    private var baseCurrency = Configuration.Policy.startupBase.currencyCode
     private var lastSuccessfulLoad = Date()
     private var isStopped = true
 
-    init(network: NetworkWrapper, reachability: ReachabilityWrapper) {
+    convenience init() {
+        self.init(network: AlamofireWrapper(),
+                  reachability: Reachability())
+    }
+
+    init(network: NetworkWrapper, reachability: ReachabilityWrapper?) {
         self.network = network
         self.reachability = reachability
     }
@@ -88,12 +101,12 @@ class RatesRequestor {
         var needsCacheInvalidate = true
 
         let whenConnectionAppears = { [weak self] in
-            self?.reachability.whenReachable = nil
+            self?.reachability?.whenReachable = nil
             needsCacheInvalidate = false
             self?.refresh()
         }
 
-        reachability.whenReachable = { [weak self] _ in
+        reachability?.whenReachable = { [weak self] _ in
             self?.queue.async(execute: whenConnectionAppears)
         }
 
