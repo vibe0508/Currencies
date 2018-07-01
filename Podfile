@@ -5,8 +5,13 @@ target 'Currencies' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
+  target 'CurrenciesTests' do
+
+  end
   # Pods for Currencies
 
+  pod 'Alamofire'
+  pod 'ReachabilitySwift'
   pod 'ReactiveCocoa', :git => 'git@github.com:ReactiveCocoa/ReactiveCocoa.git', :branch => 'xcode-10'
 
   post_install do |installer|

@@ -13,7 +13,7 @@ class CurrenciesListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
 
-    let viewModel: CurrenciesListViewModel
+    let viewModel: CurrenciesListViewModel! = nil
 
     private var reloadSubscription: ScopedDisposable<AnyDisposable>?
 
@@ -34,7 +34,7 @@ class CurrenciesListViewController: UIViewController {
 
 extension CurrenciesListViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.cells.count
+        return 0//viewModel.cells.count
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
