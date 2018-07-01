@@ -52,17 +52,24 @@ class CurrencyCellViewModelImpl: CurrencyCellViewModel {
     private let userInputPipe = Signal<String?, NoError>.pipe()
 
     private let amountProvider: AmountProvider
+    private let currencyInfoProvider: CurrencyInfoProviderWrapper
     private let amountFormatter: NumberFormatter = {
         let fmtr = NumberFormatter()
         fmtr.numberStyle = .decimal
+        fmtr.minimumFractionDigits = 2
+        fmtr.maximumFractionDigits = 2
+        fmtr.decimalSeparator = "."
+        fmtr.groupingSeparator = ""
         return fmtr
     }()
     private let dataScheduler: Scheduler = QueueScheduler(qos: .userInitiated)
 
-    init(currencyCode: String, amountProvider: AmountProvider) {
+    init(currencyCode: String, amountProvider: AmountProvider, currencyInfoProvider: CurrencyInfoProviderWrapper) {
         self.currencyCode = currencyCode
         self.amountProvider = amountProvider
+        self.currencyInfoProvider = currencyInfoProvider
         subscribeToUserInput()
+        getCurrencyInfo()
     }
 
     var currencyTitle: SignalProducer<String?, NoError> {
@@ -80,13 +87,10 @@ class CurrencyCellViewModelImpl: CurrencyCellViewModel {
                 self?.mode == .slave
             }
             .map { [weak self] in
-                guard let `self` = self,
-                    let amount = self.amountProvider.amount(for: self.currencyCode) else {
-                        return nil
-                }
-                return self.amountFormatter.string(from: amount as NSNumber)
+                return self?.amountString()
             }
-            .observe(on: UIScheduler()).producer
+            .observe(on: UIScheduler())
+            .producer.prefix(value: amountString())
     }
 
     var userInputAmount: Signal<String?, NoError>.Observer {
@@ -121,5 +125,19 @@ class CurrencyCellViewModelImpl: CurrencyCellViewModel {
                 self.mode = .master
             }
         }
+    }
+
+    private func getCurrencyInfo() {
+        currencyInfoProvider.currencyInfo(for: currencyCode) { [weak self] (info) in
+            self?.currencyTitleProperty.value = info.name
+            self?.symbolicIconProperty.value = info.symbolicIcon
+        }
+    }
+
+    private func amountString() -> String? {
+        guard let amount = amountProvider.amount(for: self.currencyCode) else {
+            return nil
+        }
+        return amountFormatter.string(from: amount as NSNumber)
     }
 }

@@ -36,6 +36,8 @@
 		11F8868520E953FF0098DC13 /* CurrencyCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8868420E953FF0098DC13 /* CurrencyCellViewModelTests.swift */; };
 		11F8868720E954400098DC13 /* CurrencyCellVMDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8868620E954400098DC13 /* CurrencyCellVMDelegateMock.swift */; };
 		11F8868920E95BD30098DC13 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8868820E95BD30098DC13 /* CalculatorTests.swift */; };
+		11F8868B20E96BB90098DC13 /* CurrencyInfoProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8868A20E96BB90098DC13 /* CurrencyInfoProvider.swift */; };
+		11F8868D20E96BEC0098DC13 /* CurrencyInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8868C20E96BEC0098DC13 /* CurrencyInfo.swift */; };
 		C0FF3184CA910F5B2DB22283 /* Pods_Currencies_CurrenciesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8647A707D6AC11C7D79AFCB /* Pods_Currencies_CurrenciesTests.framework */; };
 		FF3A419C4884AEE62A7BB7B5 /* Pods_Currencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5A1B806EB3FC9F20058761 /* Pods_Currencies.framework */; };
 /* End PBXBuildFile section */
@@ -84,6 +86,8 @@
 		11F8868420E953FF0098DC13 /* CurrencyCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCellViewModelTests.swift; sourceTree = "<group>"; };
 		11F8868620E954400098DC13 /* CurrencyCellVMDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCellVMDelegateMock.swift; sourceTree = "<group>"; };
 		11F8868820E95BD30098DC13 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
+		11F8868A20E96BB90098DC13 /* CurrencyInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInfoProvider.swift; sourceTree = "<group>"; };
+		11F8868C20E96BEC0098DC13 /* CurrencyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInfo.swift; sourceTree = "<group>"; };
 		5FCEE8EF7D5C104DFCF417A5 /* Pods-Currencies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies/Pods-Currencies.release.xcconfig"; sourceTree = "<group>"; };
 		75D14BE7E9179F9864EBCE91 /* Pods-Currencies-CurrenciesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies-CurrenciesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies-CurrenciesTests/Pods-Currencies-CurrenciesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8647A707D6AC11C7D79AFCB /* Pods_Currencies_CurrenciesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currencies_CurrenciesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -184,6 +188,7 @@
 			children = (
 				11F8865520E82C8E0098DC13 /* CalculationBase.swift */,
 				11F8865120E829700098DC13 /* ExchangeRatesResponse.swift */,
+				11F8868C20E96BEC0098DC13 /* CurrencyInfo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -221,6 +226,7 @@
 				11F8865A20E833180098DC13 /* RatesRequestor.swift */,
 				11F8866020E8AFEC0098DC13 /* ReachabilityWrapper.swift */,
 				11F8867A20E8F8AF0098DC13 /* AmountCalculator.swift */,
+				11F8868A20E96BB90098DC13 /* CurrencyInfoProvider.swift */,
 			);
 			path = DataLayer;
 			sourceTree = "<group>";
@@ -444,6 +450,7 @@
 				11F8864E20E827FA0098DC13 /* ReactiveSwift+Extensions.swift in Sources */,
 				11F8864C20E819140098DC13 /* CurrencyCell.swift in Sources */,
 				11F8864A20E8174A0098DC13 /* UITableView+Extensions.swift in Sources */,
+				11F8868B20E96BB90098DC13 /* CurrencyInfoProvider.swift in Sources */,
 				11F8865D20E834E30098DC13 /* AnyError.swift in Sources */,
 				11F8865420E82B5B0098DC13 /* Dictionary+Decodable.swift in Sources */,
 				11F8865B20E833180098DC13 /* RatesRequestor.swift in Sources */,
@@ -452,6 +459,7 @@
 				11F8863320E80AD40098DC13 /* CurrenciesListViewController.swift in Sources */,
 				11F8865620E82C8F0098DC13 /* CalculationBase.swift in Sources */,
 				11F8864520E8129F0098DC13 /* CurrencyCellViewModel.swift in Sources */,
+				11F8868D20E96BEC0098DC13 /* CurrencyInfo.swift in Sources */,
 				11F8865220E829700098DC13 /* ExchangeRatesResponse.swift in Sources */,
 				11F8863120E80AD40098DC13 /* AppDelegate.swift in Sources */,
 				11F8865920E82D080098DC13 /* NetworkWrapper.swift in Sources */,

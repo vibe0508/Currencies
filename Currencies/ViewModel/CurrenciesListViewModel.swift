@@ -28,6 +28,7 @@ class CurrenciesListViewModelImpl: CurrenciesListViewModel {
 
     private let calculator: Calculator
     private let requestor: RatesRequestorWrapper
+    private let currencyInfoProvider = CurrencyInfoProvider()
 
     convenience init() {
         self.init(calculator: AmountCalculator(base: Configuration.Policy.startupBase),
@@ -63,7 +64,8 @@ class CurrenciesListViewModelImpl: CurrenciesListViewModel {
 
     private func cellViewModel(for currencyCode: String) -> CurrencyCellViewModelImpl {
         let viewModel = CurrencyCellViewModelImpl(currencyCode: currencyCode,
-                                                  amountProvider: calculator)
+                                                  amountProvider: calculator,
+                                                  currencyInfoProvider: currencyInfoProvider)
         valueUpdatesPipe.output.observe(viewModel.updatesObserver)
         viewModel.delegate = self
         return viewModel

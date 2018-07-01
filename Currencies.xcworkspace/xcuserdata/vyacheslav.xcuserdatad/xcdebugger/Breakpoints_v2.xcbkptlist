@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CurrenciesTests/RatesRequestorTests.swift"
-            timestampString = "552168308.256662"
+            timestampString = "552173088.83959"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "123"
@@ -138,7 +138,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/DataLayer/RatesRequestor.swift"
-            timestampString = "552168308.256776"
+            timestampString = "552173088.839708"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "77"
@@ -154,7 +154,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/DataLayer/RatesRequestor.swift"
-            timestampString = "552168308.2568361"
+            timestampString = "552173088.839766"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "82"
@@ -170,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/DataLayer/RatesRequestor.swift"
-            timestampString = "552168308.2568901"
+            timestampString = "552173088.839819"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "86"
@@ -186,11 +186,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrenciesListViewModel.swift"
-            timestampString = "552168308.2569439"
+            timestampString = "552173088.839872"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "55"
-            endingLineNumber = "55"
+            startingLineNumber = "56"
+            endingLineNumber = "56"
             landmarkName = "setupSubscriptions()"
             landmarkType = "7">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrenciesListViewModel.swift"
-            timestampString = "552168308.2569979"
+            timestampString = "552173088.8399301"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "110"
-            endingLineNumber = "110"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "requestMaster(for:with:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrencyCellViewModel.swift"
-            timestampString = "552168308.257062"
+            timestampString = "552173088.840004"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "userInput"
             landmarkType = "24">
             <Locations>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrencyCellViewModel.swift"
-            timestampString = "552168308.2571141"
+            timestampString = "552173088.840445"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "122"
+            endingLineNumber = "122"
             landmarkName = "subscribeToUserInput()"
             landmarkType = "7">
          </BreakpointContent>
@@ -282,11 +282,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrencyCellViewModel.swift"
-            timestampString = "552168308.257165"
+            timestampString = "552173088.840741"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "108"
+            endingLineNumber = "108"
             landmarkName = "userInput"
             landmarkType = "24">
          </BreakpointContent>
@@ -298,11 +298,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrencyCellViewModel.swift"
-            timestampString = "552168308.257216"
+            timestampString = "552173088.841045"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "105"
-            endingLineNumber = "105"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "userInput"
             landmarkType = "24">
             <Locations>
@@ -361,7 +361,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/View/CurrencyCell.swift"
-            timestampString = "552168308.2572711"
+            timestampString = "552173088.8413351"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -377,12 +377,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrencyCellViewModel.swift"
-            timestampString = "552168308.257319"
+            timestampString = "552173088.841391"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
-            landmarkName = "init(currencyCode:amountProvider:)"
+            startingLineNumber = "68"
+            endingLineNumber = "68"
+            landmarkName = "init(currencyCode:amountProvider:currencyInfoProvider:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -393,11 +393,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrencyCellViewModel.swift"
-            timestampString = "552168308.257369"
+            timestampString = "552173088.841675"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "83"
-            endingLineNumber = "83"
+            startingLineNumber = "90"
+            endingLineNumber = "90"
             landmarkName = "amountText"
             landmarkType = "24">
          </BreakpointContent>
@@ -409,11 +409,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrencyCellViewModel.swift"
-            timestampString = "552168308.257425"
+            timestampString = "552173088.841954"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "amountText"
             landmarkType = "24">
          </BreakpointContent>
@@ -425,13 +425,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Currencies/ViewModel/CurrencyCellViewModel.swift"
-            timestampString = "552168308.257473"
+            timestampString = "552173088.842222"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
             landmarkName = "amountText"
             landmarkType = "24">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Currencies/DataLayer/CurrencyInfoProvider.swift"
+            timestampString = "552173088.842494"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "19"
+            endingLineNumber = "19"
+            landmarkName = "localesByCurrencyId"
+            landmarkType = "24">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; Swift.Dictionary&lt;Swift.String, Foundation.Locale&gt; in variable initialization expression of static Currencies.CurrencyInfoProvider.localesByCurrencyId : Swift.Dictionary&lt;Swift.String, Foundation.Locale&gt;"
+                  moduleName = "Currencies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Documents/x-code/Currencies/Currencies/DataLayer/CurrencyInfoProvider.swift"
+                  timestampString = "552171157.795447"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "321">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.String) -&gt; () in closure #1 () -&gt; Swift.Dictionary&lt;Swift.String, Foundation.Locale&gt; in variable initialization expression of static Currencies.CurrencyInfoProvider.localesByCurrencyId : Swift.Dictionary&lt;Swift.String, Foundation.Locale&gt;"
+                  moduleName = "Currencies"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/vyacheslav/Documents/x-code/Currencies/Currencies/DataLayer/CurrencyInfoProvider.swift"
+                  timestampString = "552171157.797171"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "211">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
