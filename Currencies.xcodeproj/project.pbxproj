@@ -88,6 +88,7 @@
 		11F8868820E95BD30098DC13 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		11F8868A20E96BB90098DC13 /* CurrencyInfoProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInfoProvider.swift; sourceTree = "<group>"; };
 		11F8868C20E96BEC0098DC13 /* CurrencyInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyInfo.swift; sourceTree = "<group>"; };
+		11F8868E20E97E620098DC13 /* Readme.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = Readme.md; sourceTree = "<group>"; };
 		5FCEE8EF7D5C104DFCF417A5 /* Pods-Currencies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies/Pods-Currencies.release.xcconfig"; sourceTree = "<group>"; };
 		75D14BE7E9179F9864EBCE91 /* Pods-Currencies-CurrenciesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies-CurrenciesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies-CurrenciesTests/Pods-Currencies-CurrenciesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8647A707D6AC11C7D79AFCB /* Pods_Currencies_CurrenciesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currencies_CurrenciesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -119,6 +120,7 @@
 		11F8862420E80AD30098DC13 = {
 			isa = PBXGroup;
 			children = (
+				11F8868E20E97E620098DC13 /* Readme.md */,
 				11F8862F20E80AD30098DC13 /* Currencies */,
 				11F8866720E8B2DF0098DC13 /* CurrenciesTests */,
 				11F8862E20E80AD30098DC13 /* Products */,
