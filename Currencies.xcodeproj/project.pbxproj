@@ -30,6 +30,12 @@
 		11F8867520E8B5380098DC13 /* RatesRequestorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8867420E8B5380098DC13 /* RatesRequestorTests.swift */; };
 		11F8867820E8F4200098DC13 /* DataMocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8867720E8F4200098DC13 /* DataMocks.swift */; };
 		11F8867B20E8F8AF0098DC13 /* AmountCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8867A20E8F8AF0098DC13 /* AmountCalculator.swift */; };
+		11F8867D20E949E20098DC13 /* CurrenciesListViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8867C20E949E20098DC13 /* CurrenciesListViewModelTests.swift */; };
+		11F8867F20E94A070098DC13 /* RequestorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8867E20E94A070098DC13 /* RequestorMock.swift */; };
+		11F8868120E94AD80098DC13 /* CalculatorMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8868020E94AD80098DC13 /* CalculatorMock.swift */; };
+		11F8868520E953FF0098DC13 /* CurrencyCellViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8868420E953FF0098DC13 /* CurrencyCellViewModelTests.swift */; };
+		11F8868720E954400098DC13 /* CurrencyCellVMDelegateMock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8868620E954400098DC13 /* CurrencyCellVMDelegateMock.swift */; };
+		11F8868920E95BD30098DC13 /* CalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11F8868820E95BD30098DC13 /* CalculatorTests.swift */; };
 		C0FF3184CA910F5B2DB22283 /* Pods_Currencies_CurrenciesTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A8647A707D6AC11C7D79AFCB /* Pods_Currencies_CurrenciesTests.framework */; };
 		FF3A419C4884AEE62A7BB7B5 /* Pods_Currencies.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BA5A1B806EB3FC9F20058761 /* Pods_Currencies.framework */; };
 /* End PBXBuildFile section */
@@ -72,6 +78,12 @@
 		11F8867420E8B5380098DC13 /* RatesRequestorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatesRequestorTests.swift; sourceTree = "<group>"; };
 		11F8867720E8F4200098DC13 /* DataMocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataMocks.swift; sourceTree = "<group>"; };
 		11F8867A20E8F8AF0098DC13 /* AmountCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AmountCalculator.swift; sourceTree = "<group>"; };
+		11F8867C20E949E20098DC13 /* CurrenciesListViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrenciesListViewModelTests.swift; sourceTree = "<group>"; };
+		11F8867E20E94A070098DC13 /* RequestorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestorMock.swift; sourceTree = "<group>"; };
+		11F8868020E94AD80098DC13 /* CalculatorMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorMock.swift; sourceTree = "<group>"; };
+		11F8868420E953FF0098DC13 /* CurrencyCellViewModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCellViewModelTests.swift; sourceTree = "<group>"; };
+		11F8868620E954400098DC13 /* CurrencyCellVMDelegateMock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CurrencyCellVMDelegateMock.swift; sourceTree = "<group>"; };
+		11F8868820E95BD30098DC13 /* CalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorTests.swift; sourceTree = "<group>"; };
 		5FCEE8EF7D5C104DFCF417A5 /* Pods-Currencies.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies.release.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies/Pods-Currencies.release.xcconfig"; sourceTree = "<group>"; };
 		75D14BE7E9179F9864EBCE91 /* Pods-Currencies-CurrenciesTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Currencies-CurrenciesTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Currencies-CurrenciesTests/Pods-Currencies-CurrenciesTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A8647A707D6AC11C7D79AFCB /* Pods_Currencies_CurrenciesTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Currencies_CurrenciesTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -181,6 +193,9 @@
 			children = (
 				11F8867620E8F40D0098DC13 /* Mocks */,
 				11F8867420E8B5380098DC13 /* RatesRequestorTests.swift */,
+				11F8867C20E949E20098DC13 /* CurrenciesListViewModelTests.swift */,
+				11F8868420E953FF0098DC13 /* CurrencyCellViewModelTests.swift */,
+				11F8868820E95BD30098DC13 /* CalculatorTests.swift */,
 				11F8866A20E8B2DF0098DC13 /* Info.plist */,
 			);
 			path = CurrenciesTests;
@@ -192,6 +207,9 @@
 				11F8867020E8B3210098DC13 /* NetworkMock.swift */,
 				11F8867220E8B4CA0098DC13 /* ReachabilityMock.swift */,
 				11F8867720E8F4200098DC13 /* DataMocks.swift */,
+				11F8867E20E94A070098DC13 /* RequestorMock.swift */,
+				11F8868020E94AD80098DC13 /* CalculatorMock.swift */,
+				11F8868620E954400098DC13 /* CurrencyCellVMDelegateMock.swift */,
 			);
 			path = Mocks;
 			sourceTree = "<group>";
@@ -446,8 +464,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				11F8868720E954400098DC13 /* CurrencyCellVMDelegateMock.swift in Sources */,
+				11F8867F20E94A070098DC13 /* RequestorMock.swift in Sources */,
 				11F8867520E8B5380098DC13 /* RatesRequestorTests.swift in Sources */,
+				11F8868520E953FF0098DC13 /* CurrencyCellViewModelTests.swift in Sources */,
+				11F8867D20E949E20098DC13 /* CurrenciesListViewModelTests.swift in Sources */,
 				11F8867820E8F4200098DC13 /* DataMocks.swift in Sources */,
+				11F8868120E94AD80098DC13 /* CalculatorMock.swift in Sources */,
+				11F8868920E95BD30098DC13 /* CalculatorTests.swift in Sources */,
 				11F8867120E8B3210098DC13 /* NetworkMock.swift in Sources */,
 				11F8867320E8B4CA0098DC13 /* ReachabilityMock.swift in Sources */,
 			);

@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct CalculationBase {
+struct CalculationBase: Equatable {
     let currencyCode: String
     let amount: Double
 }

@@ -40,7 +40,7 @@ class RatesRequestorTests: XCTestCase {
     func testNormalSchedule() {
         let desiredNumber = 3
 
-        network.expectedResult = .success(ExchangeRatesResponse(baseCurrency: "EUR", rates: []))
+        network.expectedResult = .success(.mocked)
 
         let desiredRefreshHappened = expectation(description: UUID().uuidString)
 
@@ -61,7 +61,7 @@ class RatesRequestorTests: XCTestCase {
 
     func testBaseChange() {
 
-        network.expectedResult = .success(ExchangeRatesResponse(baseCurrency: "EUR", rates: []))
+        network.expectedResult = .success(.mocked)
 
         let desiredRefreshHappened = expectation(description: UUID().uuidString)
 
@@ -91,7 +91,7 @@ class RatesRequestorTests: XCTestCase {
 
         XCTAssertNotNil(reachability.whenReachable)
 
-        network.expectedResult = .success(ExchangeRatesResponse(baseCurrency: "EUR", rates: []))
+        network.expectedResult = .success(.mocked)
         reachability.whenReachable?(Reachability()!)
 
         let desiredRefreshHappened = expectation(description: UUID().uuidString)
@@ -110,7 +110,7 @@ class RatesRequestorTests: XCTestCase {
 
         let cacheInvalidated = expectation(description: UUID().uuidString)
         let desiredRefreshHappened = expectation(description: UUID().uuidString)
-        network.expectedResult = .success(ExchangeRatesResponse(baseCurrency: "EUR", rates: []))
+        network.expectedResult = .success(.mocked)
         requestor.start()
 
         requestor.state.filter(hasValueFilter).take(first: 1).startWithValues { [network] _ in
@@ -127,7 +127,7 @@ class RatesRequestorTests: XCTestCase {
 
         XCTAssertNotNil(reachability.whenReachable)
 
-        network.expectedResult = .success(ExchangeRatesResponse(baseCurrency: "EUR", rates: []))
+        network.expectedResult = .success(.mocked)
         reachability.whenReachable?(Reachability()!)
 
         wait(for: [desiredRefreshHappened], timeout: 2.0)

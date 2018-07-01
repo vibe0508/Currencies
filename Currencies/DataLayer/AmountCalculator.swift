@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol AmountCalculatorWrapper: AmountProvider {
+protocol AmountCalculatorWrapper {
     func set(_ base: CalculationBase)
     func set(_ data: ExchangeRatesResponse)
 }
@@ -32,7 +32,7 @@ class AmountCalculator {
             return base
         }
         return CalculationBase(currencyCode: data.baseCurrency,
-                               amount: base.amount != 0 ? rate / base.amount : 0)
+                               amount: base.amount != 0 ? base.amount / rate : 0)
     }
 
 }
@@ -54,11 +54,17 @@ extension AmountCalculator: AmountCalculatorWrapper {
             self.preconvertedBase = self.calcPreconvertedBase()
         }
     }
+}
+
+extension AmountCalculator: AmountProvider {
 
     func amount(for currency: String) -> Double? {
         return queue.sync {
             guard currency != base.currencyCode else {
                 return base.amount
+            }
+            guard currency != preconvertedBase.currencyCode else {
+                return preconvertedBase.amount
             }
             return data?.rates[currency].flatMap { preconvertedBase.amount * $0 }
         }

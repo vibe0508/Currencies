@@ -8,20 +8,12 @@
 
 import Foundation
 
-struct ExchangeRatesResponse {
+struct ExchangeRatesResponse: Equatable, Decodable {
     let baseCurrency: String
     let rates: [String: Double]
-}
 
-extension ExchangeRatesResponse: Decodable {
-    private enum DecodingKey: String, CodingKey {
+    enum CodingKeys: String, CodingKey {
         case baseCurrency = "base"
         case rates
-    }
-
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: DecodingKey.self)
-        baseCurrency = try container.decode(String.self, forKey: .baseCurrency)
-        rates = try container.decode([String: Double].self, forKey: .rates)
     }
 }

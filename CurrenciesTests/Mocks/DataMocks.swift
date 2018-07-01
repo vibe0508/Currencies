@@ -10,9 +10,9 @@ import Foundation
 @testable import Currencies
 
 extension ExchangeRatesResponse {
-    static let mocked = ExchangeRatesResponse(baseCurrency: "EUR", rates: [.mocked])
+    static let mocked = ExchangeRatesResponse(baseCurrency: "EUR", rates: [:])
 }
 
-extension ExchangeRate {
-    static let mocked = ExchangeRate(currencyCode: "EUR", rate: 1.0)
+extension CalculationBase {
+    static let mocked = CalculationBase(currencyCode: "EUR", amount: 8)
 }

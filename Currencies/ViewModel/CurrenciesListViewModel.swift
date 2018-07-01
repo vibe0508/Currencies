@@ -16,15 +16,17 @@ protocol CurrenciesListViewModel {
 
 class CurrenciesListViewModelImpl: CurrenciesListViewModel {
 
+    typealias Calculator = AmountCalculatorWrapper & AmountProvider
+
     private var cellViewModels: [CurrencyCellViewModelImpl] = []
 
     private let reloadsPipe = Signal<(), NoError>.pipe()
-    private let valueUpdatesPipe = Signal<(), NoError>.pipe()
+    let valueUpdatesPipe = Signal<(), NoError>.pipe()
 
     private var masterSubscription: Disposable?
     private weak var currentMasterCellViewModel: CurrencyCellViewModelImpl?
 
-    private let calculator: AmountCalculatorWrapper
+    private let calculator: Calculator
     private let requestor: RatesRequestorWrapper
 
     convenience init() {
@@ -32,7 +34,7 @@ class CurrenciesListViewModelImpl: CurrenciesListViewModel {
                   requestor: RatesRequestor())
     }
 
-    init(calculator: AmountCalculatorWrapper, requestor: RatesRequestorWrapper) {
+    init(calculator: Calculator, requestor: RatesRequestorWrapper) {
         self.calculator = calculator
         self.requestor = requestor
         setupSubscriptions()
